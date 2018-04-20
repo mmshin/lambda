@@ -1,0 +1,9 @@
+service: snapshots-cleanup-agent
+
+provider:
+  name: aws
+  runtime: python2.7
+
+functions:
+  cleanupSnapshots:
+    handler: handler.cleanupSnapshots
