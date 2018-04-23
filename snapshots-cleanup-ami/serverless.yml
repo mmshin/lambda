@@ -1,0 +1,15 @@
+#
+# Powered by Serverless
+#
+# Created by Mary Rose Quito
+#
+#
+service: snapshots-cleanup-ami
+
+provider:
+  name: aws
+  runtime: python2.7
+
+functions:
+  cleanupSnapshotsAmi:
+    handler: handler.cleanupSnapshotsAmi

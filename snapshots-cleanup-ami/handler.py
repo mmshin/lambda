@@ -1,6 +1,15 @@
+#
+# A lambda function to check if the source AMIs of the
+# Create by Image Snapshots are still existing.
+# If the snapshots are already orphaned, it will be deleted.
+#
+# Created by : Mary Rose Quito
+#
+#
+
 import boto3
 
-def cleanupSnapshots(event, context):
+def cleanupSnapshotsAmi(event, context):
     client = boto3.client('ec2', region_name="us-west-2")
     snapshotAll = client.describe_snapshots(
      OwnerIds=[
