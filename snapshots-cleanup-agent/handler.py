@@ -32,7 +32,7 @@ def cleanupSnapshots(event, context):
         )['Images']
 
         if not imagesAll:
-            print("Deleting orpahned snapshots")
+            print("Deleting orphaned snapshots")
             deleteSnapshot = client.delete_snapshot(
                 SnapshotId=ssId
             )
